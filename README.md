@@ -1,7 +1,7 @@
 # The Employee-Project CLI
 
 ## Building
-For ease-of-use, this project provides a `farjar` gradle task which
+For ease-of-use, this project provides a `fatjar` gradle task which
 can be run using `gradle build fatjar`. This compiles the project into
 a jar file, located at `/build/libs/employee-cli-{version}.jar`
 
