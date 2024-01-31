@@ -41,10 +41,6 @@ longest on any project:
 java -jar employee-cli-1.0-SNAPSHOT.jar -xf employees.xml
 ```
 
-```bash
-java -jar employee-cli-1.0-SNAPSHOT.jar -sxf employees.xml
-```
-
 ### Single Project Mode
 
 It is also possible to find the pair of employees who have worked for the longest
@@ -52,6 +48,10 @@ time together on a single project by passing the `s` flag:
 
 ```bash
 java -jar employee-cli-1.0-SNAPSHOT.jar -sf employees.csv
+```
+
+```bash
+java -jar employee-cli-1.0-SNAPSHOT.jar -sxf employees.xml
 ```
 
 ### Note on JSON & XML
