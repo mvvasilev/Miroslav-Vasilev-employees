@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group = 'eu.homebr'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'commons-cli:commons-cli:1.6.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.15.0'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.16.1'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.16.1'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "dev.mvvasilev.Main"
+    }
+}
+
+task fatjar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'dev.mvvasilev.Main'
+    }
+    archiveBaseName = 'employees-cli'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+test {
+    useJUnitPlatform()
+}

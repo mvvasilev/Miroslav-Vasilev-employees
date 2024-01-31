@@ -1,0 +1,25 @@
+<EmployeeProjects>
+    <Value>
+        <EmpID>1</EmpID>
+        <ProjectID>2</ProjectID>
+        <DateFrom>2020-01-01</DateFrom>
+        <DateTo>2023-06-01</DateTo>
+    </Value>
+    <Value>
+        <EmpID>2</EmpID>
+        <ProjectID>21</ProjectID>
+        <DateFrom>2021-01-01</DateFrom>
+        <DateTo>2022-08-01</DateTo>
+    </Value>
+    <Value>
+        <EmpID>10</EmpID>
+        <ProjectID>15</ProjectID>
+        <DateFrom>2008-01-01</DateFrom>
+        <DateTo>2014-06-05</DateTo>
+    </Value>
+    <Value>
+        <EmpID>11</EmpID>
+        <ProjectID>21</ProjectID>
+        <DateFrom>2009-01-01</DateFrom>
+    </Value>
+</EmployeeProjects>
